@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>border image</title>
+
+    <style>
+        body{
+            margin: 50px;
+            
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .hello{
+            max-width: 100%;
+            background-color: azure;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            border-left: 3px solid tomato;
+            border-top-left-radius: 5px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+        .btn-start{
+            padding: 0 20px 0 20px;
+            background-color: hsl(204, 65%, 59%);
+            /* background-color: transparent; */
+            color: white;
+            font-size: 26px;
+            border:5px solid transparent;
+            border-radius: 5px;
+            width: 150px;
+            margin-top: 10px;
+            border-image: url('safina.jpg') 50 stretch;
+            outline: 3px dotted rgb(7, 238, 219);
+            
+        }
+        .btn-start:hover{
+            background-color: hsl(204, 78%, 41%);
+            cursor: pointer;
+        }
+        @media screen and (max-width: 768px){
+        
+            body{
+                margin: auto;
+            }
+            .hello{
+                margin-top: 20px;
+            }
+         
+            
+        }
+        .tag-new{
+            background-color: tomato;
+            font-size: 26px;
+            padding: 0 10px 0 10px;
+            color: white;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(40deg);
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 10%;
+            
+            
+        }
+        .animated-div{
+            margin-left: 20px;
+            
+        }
+        
+        .animated-div ul li{
+            background-color: bisque;
+            animation-name: example;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction:alternate-reverse;
+            animation-timing-function: ease-out;
+            animation-fill-mode: both;
+
+        }
+        .animated-div ul{
+            border: 1px solid black;
+        }
+        @keyframes example {
+            from {
+                list-style-type: none;
+                width: 0;
+            }
+            to{
+                list-style-type: circle;
+                
+                background-color: aquamarine;
+                width: 100%;
+               
+            }
+
+            /* 0%{
+                width: 0%;
+                background-color: aquamarine;
+                
+            }
+            25%{
+                width: 25%;
+                
+            }
+            50%{
+                width: 50%;
+                
+            }
+            100%{
+                width: 100%;
+                background-color: aquamarine;
+            } */
+
+            
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter:grayscale(50%);
+        
+
+        }
+        .section-1 .mybackground{
+            margin-top: 10px;
+        }
+     
+    </style>
+</head>
+<body>
+    <img width="100" height="100" src="https://img.icons8.com/plasticine/100/home.png" alt="home"/>
+   
+    <div class="hello animate__animated animate__bounceInLeft">
+        <img class="animate__animated animate__backInLeft" src="animation_ll1dqw1c_small.gif" alt="">
+        <h1 class="animate__animated animate__backInLeft" >wellcome to my web site </h1>
+    
+        <button class="btn-start animate__animated animate__fadeInLeft"> start</button>
+        <span class="tag-new">New</span>
+       
+    </div>
+    <div class="image hello" style="background: transparent;">
+        <img src="Lightbulb1.png" alt="" width="400px" height="400px" id="lump">
+        <button class="btn-start animate__animated animate__fadeInLeft" onclick="lumpWorkOut(); this.innerHTML= (this.innerHTML == 'Turn On Lump')? 'Turn Off Lump':'Turn On Lump' ">Turn On Lump</button>
+    </div>
+    
+    <div class="animated-div">
+        <h1>Food:</h1>
+        <ul>
+            <li>Rice</li>
+            <li>Beans</li>
+            <li>Potatos</li>
+            <li>Meet</li>
+        </ul>
+    </div>
+    <section class="section-1">
+        <div class="mybackground">
+            <img src="technology-background-1632715.jpg" alt="electronic image" width="1000" height="300">
+        </div>
+    </section>
+    <script>
+        let items = [23, 32, 34, 12];
+       items.forEach(function(item, index, array){
+            console.log(index,item);
+        })
+       console.log(items.map(function(item, index, array){
+            return item;
+        }))
+        // background: linear-gradient (260deg, #9b6c50 0%, #4f2626 100%);
+        
+       function lumpWorkOut(){
+        let image = document.getElementById('lump')
+        image.src= (image.src == "http://127.0.0.1:5500/Lightbulb1.png")? "Lightbulb2.png" : "Lightbulb1.png"; 
+        
+       }
+    </script>
+    
+</body>
+</html>
+
+
+
+
